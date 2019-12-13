@@ -1,7 +1,21 @@
 <h1>Index page</h1>
+
+{{!-- link for get request and req.params --}}
 <a href="/person/{{me.firstName}}"><h2>Contact page with params method</h2></a>
+{{!-- link for get request and req.query --}}
 <a href="/about?firstName={{me.firstName}}&lastName={{me.lastName}}"><h2>About page with query method</h2></a>
 
+{{!-- form for get request and req.query --}}
+<form action="/search" method="GET">
+    <input type="text" placeholder="search" name="search-string">
+    <input type="submit">
+</form>
 
+{{!-- form for post request and req.body --}}
+<form action="/create" method="POST">
+    <input type="text" placeholder="Title of your recipe" name="title">
+    <input type="number" placeholder="Duration" name="duration">
+    <input type="submit">
+</form>
 
 {{!-- http://localhost:3000/about?firstName=laura&lastName=pascual --}}
