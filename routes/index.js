@@ -7,6 +7,7 @@ app.get("/", (req, res) => {
         firstName: "Laura",
         lastName: "Pascual"
     }
+    //with res.render we render a view, a hbs file
     res.render("index.hbs", {me: me})
 })
 

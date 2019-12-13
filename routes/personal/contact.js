@@ -3,9 +3,8 @@ const app = express()
 
 app.get("/:firstName", (req, res) => {
     //PARAMS
-    debugger
     let myName = req.params.firstName
-    res.render("contact.hbs", {firstName: myName})
+    res.render("personal/contact.hbs", {firstName: myName})
 })
 
 

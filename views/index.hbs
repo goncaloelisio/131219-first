@@ -1,27 +1,34 @@
-<h1>Index page</h1>
+<h2>Random things from this morning</h2>
 
 {{!-- link for get request and req.params --}}
-<a href="/person/{{me.firstName}}"><h2>Contact page with params method</h2></a>
+<h6>Link for GET route + req.params</h6>
+<p>See contact.js file</p>
+<a href="/person/{{me.firstName}}"><h6>Contact page with params method</h6></a>
+{{!-- http://localhost:3000/person/laura --}}
+
+<hr>
+
 {{!-- link for get request and req.query --}}
-<a href="/about?firstName={{me.firstName}}&lastName={{me.lastName}}"><h2>About page with query method</h2></a>
+<h6>Link for GET route + req.query</h6>
+<p>See about.js file</p>
+<a href="/about?firstName={{me.firstName}}&lastName={{me.lastName}}"><h6>About page with query method</h6></a>
+{{!-- http://localhost:3000/about?firstName=laura&lastName=pascual --}}
+
+<hr>
 
 {{!-- form for get request and req.query --}}
+<h6>Form for GET route + req.query (basically, a search bar)</h6>
+<p>See search.js file</p>
+{{!-- The default method is GET
+The action is the route that we want to send the data to --}}
 <form action="/search" method="GET">
     <input type="text" placeholder="search" name="search-string">
     <input type="submit">
 </form>
 
-{{!-- form for post request and req.body --}}
-<h2>Create a new recipe!</h2>
-<form action="/create" method="POST">
-    <input type="text" placeholder="Title of your recipe" name="title">
-    <input type="text" placeholder="Level of your recipe" name="level">
-    <input type="text" placeholder="Ingredients of your recipe" name="ingredients">
-    <input type="text" placeholder="Cuisine" name="cuisine">
-    <input type="text" placeholder="Type of dish" name="dishType">
-    <input type="text" placeholder="image url" name="image">
-    <input type="number" placeholder="Duration" name="duration">
-    <input type="submit">
-</form>
 
-{{!-- http://localhost:3000/about?firstName=laura&lastName=pascual --}}
+
+<h2>RECIPES</h2>
+
+<a href="/all-recipes">See list of recipes!</a></br>
+<a href="/create">Create a new recipe!</a>

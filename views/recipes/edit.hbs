@@ -1,0 +1,15 @@
+<h1>Edit your recipe!</h1>
+<form action="/edit" method="POST">
+    {{!-- We use the information that we found in the database to populate the values of this form --}}
+    {{!-- Check the edit.js file, the GET route --}}
+    <input type="text" value="{{recipe.title}}" name="title">
+    <input type="text" value="{{recipe.level}}" name="level">
+    <input type="text" value="{{recipe.ingredients.[0]}}" name="ingredients">
+    <input type="text" value="{{recipe.cuisine}}" name="cuisine">
+    <input type="text" value="{{recipe.dishType}}" name="dishType">
+    <input type="text" value="{{recipe.image}}" name="image">
+    <input type="number" value="{{recipe.duration}}" name="duration">
+    {{!-- I am creating a hidden input to send the id to the backend so I can find the recipe easily --}}
+    <input type="hidden" value="{{recipe.id}}" name="id">
+    <input type="submit">
+</form>

@@ -11,6 +11,7 @@ const recipeSchema = new Schema({
     duration: Number
 })
 
+//mongoose will always read the collection name as plural, even if you write it in singular
 const Recipe = mongoose.model('recipes', recipeSchema)
 
 module.exports = Recipe

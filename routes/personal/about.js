@@ -3,10 +3,11 @@ const app = express()
 
 app.get("/about", (req, res) => {
     //QUERY
-    debugger
     let firstName = req.query.firstName
     let lastName = req.query.lastName
-    res.render("about.hbs", {firstName, lastName})
+    //I have to write the path to the file (from views) because I created two folders inside views
+    //To organize it a bit
+    res.render("personal/about.hbs", {firstName: firstName, lastName: lastName})
 })
 
 module.exports = app

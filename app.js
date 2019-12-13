@@ -28,11 +28,13 @@ app.use(express.static(__dirname + "public"));
 // let indexRouter = require("./routes/index.js")
 // app.use("/", indexRouter)
 app.use("/", require("./routes/index.js"))
-app.use("/person", require("./routes/contact.js"))
-app.use("/", require("./routes/about.js"))
-app.use("/", require("./routes/search"))
-app.use("/", require("./routes/create"))
-app.use("/", require("./routes/list"))
+app.use("/person", require("./routes/personal/contact.js"))
+app.use("/", require("./routes/personal/about.js"))
+app.use("/", require("./routes/personal/search.js"))
+//Recipes routes
+app.use("/", require("./routes/recipes/create.js"))
+app.use("/", require("./routes/recipes/list.js"))
+app.use("/", require("./routes/recipes/edit.js"))
 
 
 app.listen(3000, () => {

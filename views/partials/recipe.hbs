@@ -1,1 +1,13 @@
-<h2>{{this.title}}</h2>
+<h6>{{this.title}}</h6>
+
+{{!-- params method --}}
+{{!-- see edit.js file --}}
+{{!-- We don't identify the params here with the colon, that is done in the backend --}}
+<a href="/edit/{{this.id}}">Edit with params method</a>
+
+</br>
+{{!-- see edit.js file --}}
+{{!-- query method --}}
+{{!-- We identify the query with the question mark, and after that it's a pair of key and value --}}
+{{!-- The key that you choose here ("id" in this case) is going to be stored in req.query (req.query.id in this case) --}}
+<a href="/edit?id={{this.id}}">Edit with query method</a>
